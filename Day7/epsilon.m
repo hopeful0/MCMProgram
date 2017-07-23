@@ -17,6 +17,6 @@ for k = 1:size(baselines,2)
     delta = delta - alpha(k+size(dyes,2)).*baselines(:,k);
 end
 
-% 求误差 e=(|Y-Yb|2)/|Y|2 ,|X|2指列向量X的二范式，即平方和开根
+% 求误差 e=(|Y-Yb|2)/|Y|2 ,|X|2指列向量X的二范数，即平方和开根
 e=(sqrt(sum(delta.^2)))/(sqrt(sum(dnas.^2)));
 end
