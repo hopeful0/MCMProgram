@@ -18,5 +18,6 @@ for k = 1:size(baselines,2)
 end
 
 % 求误差 e=(|Y-Yb|2)/|Y|2 ,|X|2指列向量X的二范数，即平方和开根
-e=(sqrt(sum(delta.^2)))/(sqrt(sum(dnas.^2)));
+% e=(sqrt(sum(delta.^2)))/(sqrt(sum(dnas.^2)));
+e = norm(delta,2)/norm(dnas,2);
 end
